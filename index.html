@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <title>Happy Diwali 2024</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Firecracker Section -->
+    <section class="firecracker-container" id="sec0">
+        <div class="firecracker" onclick="explodeFirecracker()">🧨</div>
+    </section>
+
+    <!-- Fireworks Section -->
+    <section class="fireworks" id="sec1"></section>
+
+    <!-- Diwali Greeting Message with Typing Effect -->
+    <section class="content" id="sec2" style="display: none;">
+        <h2 class="animated-text">
+            🎉 Happy <c>Diwali</c> from the Lawankar Family! 🎉
+        </h2>
+        <div class="typing-container">
+            <p class="typing-text">Wishing you a festival full of sparkling lights, laughter, and joy!</p>
+            <p class="typing-text">May this Diwali bring you health, wealth, and happiness.</p>
+            <p class="typing-text">Let the glow of lamps brighten your life with endless blessings!</p>
+        </div>
+    </section>
+    
+    <!-- Custom Footer with Copyright -->
+    <section class="content" id="sec3" style="display: none;">
+        <h2>Enjoy the celebration!</h2>
+        <footer>
+            &copy; 2024 DevloperYash
+        </footer>
+    </section>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="jquery.fireworks.js"></script>
+    <script type="text/javascript">
+        // Initialize fireworks but hide until clicked
+        $('#sec1').hide();
+
+        // Function to explode firecracker and show greeting
+        function explodeFirecracker() {
+            // Hide firecracker section
+            document.getElementById('sec0').style.display = 'none';
+
+            // Trigger fireworks effect
+            $('.fireworks').show().fireworks({ 
+                sound: true, 
+                opacity: 0.9, 
+                width: '100%', 
+                height: '100%' 
+            });
+
+            // Show greeting message with animation
+            document.getElementById('sec2').style.display = 'block';
+            document.getElementById('sec3').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

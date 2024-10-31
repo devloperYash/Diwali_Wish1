@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+body
+{
+	background: #003056;
+}
+section
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+.fireworks
+{
+	position: fixed;
+}
+section.content
+{
+	z-index: 1;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+section:nth-child(2).content
+{
+	padding-top: 100vh;
+}
+section.content h2
+{
+	-webkit-text-stroke: 1px #fff;
+	color: transparent;
+	font-size: 8em;
+	line-height: 0.9em;
+}
+section.content h2 c
+{
+	color: #fff;
+	-webkit-text-stroke: 0 #fff;
+}
+section.content h2 span
+{
+	position: relative;
+	background: #fff;
+	font-size: 0.2em;
+	display: inline-block;
+	color: #000;
+	padding: 0 10px;
+	top: -30px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 1.5em;
+	-webkit-text-stroke: 0px #fff;
+}
+::-webkit-scrollbar
+{
+	width: 0;
+}
+section.content img
+{
+	max-width: 300px;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+}
+/* Center Firecracker */
+.firecracker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #141414;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.firecracker {
+    font-size: 4rem;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+}
+
+/* Greeting Styles */
+#sec2 h2.animated-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out forwards;
+    opacity: 0;
+}
+
+.typing-container {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #FFFFFF;
+}
+
+.typing-text {
+    font-size: 1.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #FFD700;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fireworks Section */
+.fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+}
